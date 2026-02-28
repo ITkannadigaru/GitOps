@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ManojKRISHNAPPA/Microservice.git
+    repoURL: https://github.com/ITkannadigaru/GitOps.git
     targetRevision: main
-    path: GitOps/base/postgres
+    path: base/postgres
   destination:
     server: https://kubernetes.default.svc
     namespace: default
