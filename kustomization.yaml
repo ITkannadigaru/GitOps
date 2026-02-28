@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - adservice/app.yaml
+  - authservice/app.yaml
   - cartservice/app.yaml
   - checkoutservice/app.yaml
   - currencyservice/app.yaml
@@ -10,6 +11,7 @@ resources:
   - frontend/app.yaml
   - loadgenerator/app.yaml
   - paymentservice/app.yaml
+  - postgres/app.yaml
   - productcatalogservice/app.yaml
   - recommendationservice/app.yaml
   - shippingservice/app.yaml

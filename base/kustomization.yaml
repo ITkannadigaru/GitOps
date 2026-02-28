@@ -4,6 +4,8 @@ kind: Kustomization
 resources:
   - adservice/deployment.yaml
   - adservice/service.yaml
+  - authservice/deployment.yaml
+  - authservice/service.yaml
   - cartservice/deployment.yaml
   - cartservice/service.yaml
   - checkoutservice/deployment.yaml
@@ -17,6 +19,8 @@ resources:
   - loadgenerator/deployment.yaml
   - paymentservice/deployment.yaml
   - paymentservice/service.yaml
+  - postgres/deployment.yaml
+  - postgres/service.yaml
   - productcatalogservice/deployment.yaml
   - productcatalogservice/service.yaml
   - recommendationservice/deployment.yaml
