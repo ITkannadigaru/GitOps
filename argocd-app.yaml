@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: microservices
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/ManojKRISHNAPPA/Microservice.git
+    targetRevision: main
+    path: GitOps/overlays/microk8s      # Change to GitOps/overlays/eks for EKS
+
+  destination:
+    server: https://kubernetes.default.svc   # in-cluster (MicroK8s)
+    # server: https://EKS_API_ENDPOINT       # Uncomment for EKS — get from: aws eks describe-cluster
+    namespace: default
+    # namespace: itkannadigaru              # Uncomment for EKS namespace
+
+  syncPolicy:
+    automated:
+      prune: true        # Delete resources removed from git
+      selfHeal: true     # Revert any manual changes in cluster
+    syncOptions:
+      - CreateNamespace=true
