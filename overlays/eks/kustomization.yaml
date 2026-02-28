@@ -6,14 +6,15 @@ kind: Kustomization
 # Uncomment sections below when deploying to EKS
 # -------------------------------------------------------
 
-bases:
+resources:
   - ../../base
 
 # namespace: itkannadigaru          # Uncomment: target namespace on EKS
 
 # Common labels applied to all resources
-commonLabels:
-  environment: eks
+labels:
+  - pairs:
+      environment: eks
 
 # Image overrides — update tag here when a new image is pushed
 images:
@@ -46,7 +47,7 @@ images:
 # EKS-specific patches — Uncomment when deploying to EKS
 # -------------------------------------------------------
 
-patches:
+patches: []
   # Scale up replicas for production on EKS
   # - patch: |-
   #     apiVersion: apps/v1

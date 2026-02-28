@@ -5,14 +5,15 @@ kind: Kustomization
 # Overlay for MicroK8s + ArgoCD
 # -------------------------------------------------------
 
-bases:
+resources:
   - ../../base
 
 namespace: default
 
 # Common labels applied to all resources
-commonLabels:
-  environment: microk8s
+labels:
+  - pairs:
+      environment: microk8s
 
 # Image overrides — update tag here when a new image is pushed
 images:
