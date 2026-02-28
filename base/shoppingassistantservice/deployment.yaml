@@ -5,6 +5,9 @@ metadata:
   labels:
     app: shoppingassistantservice
 spec:
+  # Set to 0 — requires real GCP credentials (GOOGLE_API_KEY, AlloyDB) to run
+  # Change to 1 once env values are configured
+  replicas: 0
   selector:
     matchLabels:
       app: shoppingassistantservice
@@ -53,10 +56,10 @@ spec:
         resources:
           requests:
             cpu: 100m
-            memory: 64Mi
+            memory: 256Mi
           limits:
-            cpu: 200m
-            memory: 128Mi
+            cpu: 500m
+            memory: 512Mi
 ---
 apiVersion: v1
 kind: ServiceAccount
