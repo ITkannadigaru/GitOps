@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/ManojKRISHNAPPA/Microservice.git
     targetRevision: main
-    path: GitOps/base/authservice
+    path: base/authservice
   destination:
     server: https://kubernetes.default.svc
     namespace: default
