@@ -19,8 +19,6 @@ resources:
   - loadgenerator/deployment.yaml
   - paymentservice/deployment.yaml
   - paymentservice/service.yaml
-  - postgres/deployment.yaml
-  - postgres/service.yaml
   - productcatalogservice/deployment.yaml
   - productcatalogservice/service.yaml
   - recommendationservice/deployment.yaml
